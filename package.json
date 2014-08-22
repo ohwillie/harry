@@ -1,0 +1,22 @@
+{
+  "name": "node-harry",
+  "version": "0.0.1",
+  "description": "Generates HAR files from HTTP.ClientRequest objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ohwillie/node-harry"
+  },
+  "keywords": [
+    "har"
+  ],
+  "author": "Rob Hanlon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohwillie/node-harry/issues"
+  },
+  "homepage": "https://github.com/ohwillie/node-harry"
+}
