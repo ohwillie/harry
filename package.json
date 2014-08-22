@@ -1,5 +1,5 @@
 {
-  "name": "node-harry",
+  "name": "harry",
   "version": "0.0.1",
   "description": "Generates HAR files from HTTP.ClientRequest objects.",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ohwillie/node-harry"
+    "url": "https://github.com/ohwillie/harry"
   },
   "keywords": [
     "har"
@@ -16,7 +16,7 @@
   "author": "Rob Hanlon",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ohwillie/node-harry/issues"
+    "url": "https://github.com/ohwillie/harry/issues"
   },
-  "homepage": "https://github.com/ohwillie/node-harry"
+  "homepage": "https://github.com/ohwillie/harry"
 }
