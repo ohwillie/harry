@@ -1,8 +1,8 @@
 {
   "name": "harry",
   "version": "0.0.1",
-  "description": "Generates HAR files from HTTP.ClientRequest objects.",
-  "main": "index.js",
+  "description": "Generates HAR files from Request and http.IncomingMessage objects.",
+  "main": "lib/harry.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test"
   },
@@ -18,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/ohwillie/harry/issues"
   },
-  "homepage": "https://github.com/ohwillie/harry"
+  "homepage": "https://github.com/ohwillie/harry",
+  "dependencies": {
+    "underscore": "^1.7.0"
+  },
+  "devDependencies": {
+    "request": "^2.41.0",
+    "should": "^4.0.4"
+  }
 }
