@@ -6,8 +6,14 @@ from Request and http.IncomingMessage objects.
 
 ## API
 
-##### `harry.har(Request req, http.IncomingMessage res, Object timings, Date startedDateTime = new Date())`
+##### `harry.har(Entry entry)`
 
-Returns a properly formatted HAR for the given arguments. `timings` must
-contain at least the `send`, `wait`, and `receive` keys. See the spec
-for more details.
+Returns a properly formatted HAR for the given entries.
+
+##### `Entry`
+An `Entry` is simply an object with following schema:
+
+* `request`: a Request object
+* `response`: an http.IncomingMessage object
+* `timings`: an Object with at least the `send`, `wait`, and `receive`
+  keys. See the spec for more details.

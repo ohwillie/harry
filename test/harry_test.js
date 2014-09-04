@@ -6,11 +6,15 @@ describe('harry', function () {
   it('produces a valid HAR', function (done) {
     req = request('http://example.com/?foo=bar', function (err, res, body) {
       if (!err) {
-        var har = harry.har(req, res, {
-          send: 1,
-          wait: 2,
-          receive: 3
-        });
+        var har = harry.har([{
+          request: req,
+          response: res,
+          timings: {
+            send: 1,
+            wait: 2,
+            receive: 3
+          }
+        }]);
 
         should.exist(har);
 
