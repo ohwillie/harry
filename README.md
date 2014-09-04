@@ -6,12 +6,12 @@ from Request and http.IncomingMessage objects.
 
 ## API
 
-##### `harry.har(Entry entry)`
+##### `harry.har(entries)`
 
 Returns a properly formatted HAR for the given entries.
 
-##### `Entry`
-An `Entry` is simply an object with following schema:
+##### Entry
+An Entry is simply an object with following schema:
 
 * `request`: a Request object
 * `response`: an http.IncomingMessage object
