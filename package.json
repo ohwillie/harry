@@ -1,7 +1,7 @@
 {
   "name": "harry",
   "version": "0.0.1",
-  "description": "Generates HAR files from Request and http.IncomingMessage objects.",
+  "description": "Generates HARs from Request and http.IncomingMessage objects.",
   "main": "lib/harry.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test"
