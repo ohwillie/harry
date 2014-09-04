@@ -1,3 +1,4 @@
+_ = require('underscore');
 var harry = require('../lib/harry');
 var request = require('request');
 var should = require('should');
@@ -48,5 +49,78 @@ describe('harry', function () {
 
       done(err);
     });
+  });
+
+  it('does not allow an entry without a request', function () {
+    (function () {
+      harry.har([{}]);
+    }).should.throw(/request is required/);
+  });
+
+  it('does not allow an entry without a response', function () {
+    (function () {
+      harry.har([{
+        request: {}
+      }]);
+    }).should.throw(/response is required/);
+  });
+
+  it('does not allow an entry without timings', function () {
+    (function () {
+      harry.har([{
+        request: {},
+        response: {}}
+      ]);
+    }).should.throw(/timings is required/);
+  });
+
+  it('requires a send timing', function () {
+    (function () {
+      harry.har([{
+        request: {},
+        response: {},
+        timings: {}
+      }]);
+    }).should.throw(/send is a required timing/);
+  });
+
+  it('requires a wait timing', function () {
+    (function () {
+      harry.har([{
+        request: {},
+        response: {},
+        timings: {
+          send: 0
+        }
+      }]);
+    }).should.throw(/wait is a required timing/);
+  });
+
+  it('requires a receive timing', function () {
+    (function () {
+      harry.har([{
+        request: {},
+        response: {},
+        timings: {
+          send: 0,
+          wait: 0
+        }
+      }]);
+    }).should.throw(/receive is a required timing/);
+  });
+
+  it('does not allow an unknown timing', function () {
+    (function () {
+      harry.har([{
+        request: {},
+        response: {},
+        timings: {
+          send: 0,
+          wait: 0,
+          receive: 0,
+          banana: 0
+        }
+      }]);
+    }).should.throw(/banana is an unknown timing/);
   });
 });
