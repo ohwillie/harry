@@ -8,7 +8,7 @@ from Request and http.IncomingMessage objects.
 
 ##### `harry.har(entry)`
 
-Returns a properly formatted HAR for the given entries.
+Returns a properly formatted HAR for the given entry.
 
 ##### `harry.har(entries)`
 
