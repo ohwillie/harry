@@ -22,3 +22,5 @@ An Entry is simply an object with following schema:
 * `timings`: any Object with at least the `send`, `wait`, and `receive`
   keys. See [the spec](https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HAR/Overview.html)
   for more details.
+* `startedDateTime`: A Date representing when the request started. If it
+  is not provided, the current Date will be used.
