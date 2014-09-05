@@ -15,7 +15,7 @@ Returns a properly formatted HAR for the given entry.
 Returns a properly formatted HAR for the given entries.
 
 ##### Entry
-An Entry is simply an object with following schema:
+An Entry is any Object with following schema:
 
 * `request`: a Request
 * `response`: an http.IncomingMessage
