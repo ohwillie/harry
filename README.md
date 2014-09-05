@@ -2,7 +2,9 @@
 
 Generates
 [HARs](https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HAR/Overview.html)
-from Request and http.IncomingMessage objects.
+from [Request](https://github.com/mikeal/request) and
+[http.IncomingMessage](http://nodejs.org/api/http.html#http_http_incomingmessage)
+objects.
 
 ## API
 
@@ -17,8 +19,9 @@ Returns a properly formatted HAR for the given entries.
 ##### Entry
 An Entry is any Object with following schema:
 
-* `request`: a Request
-* `response`: an http.IncomingMessage
+* `request`: a [Request](https://github.com/mikeal/request)
+* `response`: an
+  [http.IncomingMessage](http://nodejs.org/api/http.html#http_http_incomingmessage)
 * `timings`: any Object with at least the `send`, `wait`, and `receive`
   keys. See [the spec](https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/HAR/Overview.html)
   for more details.
